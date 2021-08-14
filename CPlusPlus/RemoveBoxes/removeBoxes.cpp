@@ -7,7 +7,7 @@ public:
         if (i>j) return 0;
         if (dynarray[i][j][k]>0) return dynarray[i][j][k];
         // start with boxes[i] and interval [i+1, j]
-        int result = (k+1) * (k+1) + dp(boxes, i+1, j, 0, dp);
+        int result = (k+1) * (k+1) + dp(boxes, i+1, j, 0, dynarray);
         for (int m = i + 1; m <= j; m++)
         {
             // if boxes[i]==boxes[m], we can thus eliminate interval [i+1, m-1]
