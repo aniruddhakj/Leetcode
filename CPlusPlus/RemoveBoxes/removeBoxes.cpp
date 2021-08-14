@@ -15,14 +15,14 @@ public:
             if (boxes[i]==boxes[m])
                 // if boxes[i] and boxes[m] are adjacent, then
                 // there will be k+1 boxes on the left of boxes[m] with the same value
-                result = max( res, dp(boxes, i+1, m-1, 0, dynarray) + dp(boxes, m, j, k+1, dynarray) );
+                result = max( result, dp(boxes, i+1, m-1, 0, dynarray) + dp(boxes, m, j, k+1, dynarray) );
         }
         dynarray[i][j][k] = res;
-        return res;
+        return result;
     }
     int removeBoxes(vector<int>& boxes)
     {
-        int dyboxes[100][100][100] = {0};    // number of boxes would not exceed 100
+        int dyboxes[100][100][100] = {0}; 
         int n = boxes.size();
         return dp(boxes, 0, n-1, 0, dyboxes);   // in the closed interval [0, n-1]
     }
