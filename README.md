@@ -1,2 +1,2 @@
 # LeetcodeAlgos
-A repo containing my solutions to certain Leetcode problems
+A repo containing solutions to certain Leetcode problems
