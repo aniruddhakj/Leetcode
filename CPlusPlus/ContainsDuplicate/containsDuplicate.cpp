@@ -17,12 +17,12 @@ Output: false
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-        std::unordered_set<int> unique(nums.size());
-        for(int number: nums){
-            auto [itr, inserted] = unique.insert(number);
-            if(!inserted)
+        unordered_set<int>s;
+        for(int i : nums){
+            if(s.find(i) != s.end()) //if i is found in set, dupe value case
                 return true;
+            s.insert(i); // not found, insert into set
         }
-        return false;
+        return false; //after the pass no dupes found
     }
 };
