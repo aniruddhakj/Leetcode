@@ -1,2 +1,3 @@
-# LeetcodeAlgos
-A repo containing solutions to certain Leetcode problems
+# Leetcode Problems Solutions
+
+Solutions to Leetcode problems as and when solved
