@@ -17,16 +17,14 @@ Explanation: There are two ways to climb to the top.
 
 class Solution {
 public:
+    //This is just fibonacci a stores the current step and ways stores the total steps
     int climbStairs(int n) {
-        if(n == 0) return 0;
-        if(n == 1) return 1;
-        if(n == 2) return 2;
-        int a = 1, b = 2;
-        for(int i = 3; i <= n; i++){
-            int c = a + b;
-            a = b;
-            b = c;
+        int one = 1, two = 1;
+        for(int i = 0; i < n - 1; ++i){
+            int temp = one;
+            one += two;
+            two = temp;
         }
-        return b;      
+        return one;
     }
 };
