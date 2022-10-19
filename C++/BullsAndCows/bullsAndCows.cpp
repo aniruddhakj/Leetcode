@@ -25,7 +25,8 @@ Explanation: Bulls are connected with a '|' and cows are underlined:
 "7810"
 *******************************************************************************/
 
-//INTUITION: 
+// INTUITION: hashtables to store frequencies of both secret and guess
+// Operate on these tables
 
 class Solution {
 public:
@@ -44,6 +45,7 @@ public:
         }
         
         // B will be the min of appearance of each number in both secret and guess
+        // at each iteration 
 
         for(int i = 0; i < s.size(); i++){
             cows += min(s[i], g[i]);
