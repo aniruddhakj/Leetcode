@@ -19,31 +19,37 @@ Output: "bb"
 class Solution {
 public:
     string longestPalindrome(string s) {
-        int n = s.size();
-        if(n == 0) return ""; // empty string case
-        int maxLen = 1;
-        string maxStr = s.substr(0, 1);
-        for(int i = 0; i < n; i++){
-            string str = palindromeHelper(s, i, i);
-            if(str.size() > maxLen){
-                maxLen = str.size();
-                maxStr = str;
+        // different cases for odd/even length palindrome
+        int resLen = 0,  n = s.size();
+        
+        string res = "";
+        
+        for(int i = 0; i < n; ++i) {
+            // case odd length palindrome
+            int l = i, r = i;
+            // check for palindrome
+            while(l >= 0 && r < n && s[l] == s[r]) {
+                // if current len is greater than stored result len
+                // update length of res and res itself
+                if( r - l + 1 > resLen) { 
+                    resLen = r - l + 1;  
+                    res = s.substr(l, resLen); 
+                }
+                l--; r++;
             }
-            //extra check for complete string
-            str = palindromeHelper(s, i, i + 1);
-            if(str.size() > maxLen){
-                maxLen = str.size();
-                maxStr = str;
+            
+            // case even length palindrome, init r with i + 1
+            l = i; r = i + 1;
+            while(l >= 0 && r < n && s[l] == s[r]) {
+                if( r - l + 1 > resLen) {
+                    resLen = r - l + 1; 
+                    res = s.substr(l, resLen);
+                }
+                l--; r++;
             }
+            
         }
-        return maxStr;
-    }
-    string palindromeHelper(string s, int left, int right){
-        //two pointer method to check for greatest palindrome substring
-        while(left >= 0 && right < s.size() && s[left] == s[right]){
-            left--;
-            right++;
-        }
-        return s.substr(left + 1, right - left - 1);
+            
+        return res;
     }
 };
