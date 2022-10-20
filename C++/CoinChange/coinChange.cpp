@@ -1,5 +1,5 @@
 // Author : Aniruddha Krishna Jha
-// Date : 16/01/2022
+// Date : 20/10/2022
 
 /*******************************************************************************
 You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.
@@ -16,15 +16,18 @@ Output: 3
 Explanation: 11 = 5 + 5 + 1
 *******************************************************************************/
 
+// INTUITION: dp[i] = min(dp[i], 1 + dp[i - c])
+// for each c in coins
+
 class Solution {
 public:
     int coinChange(vector<int>& coins, int amount) {
         vector<int> dp(amount+1, amount+1);
-        dp[0] = 0;
+        dp[0] = 0; // base -> to reach 0 we need 0 coins
         for(int i = 1; i <= amount; i++){
             for(int c: coins){
                 if(i >= c){
-                    dp[i] = min(dp[i], dp[i-c] + 1);
+                    dp[i] = min(dp[i], 1 + dp[i-c]);
                 }
             }
         }
