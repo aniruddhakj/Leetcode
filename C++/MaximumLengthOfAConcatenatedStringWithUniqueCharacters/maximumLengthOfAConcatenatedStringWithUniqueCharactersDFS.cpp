@@ -1,54 +1,32 @@
 // Author : Aniruddha Krishna Jha
 // Date : 24/10/2022
 
-/*******************************************************************************
-// Author : Aniruddha Krishna Jha
-// Date : 23/10/2022
 
 /*******************************************************************************
-Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.
-Note that the same word in the dictionary may be reused multiple times in the segmentation.
+You are given an array of strings arr. A string s is formed by the concatenation of a subsequence of arr that has unique characters.
+
+Return the maximum possible length of s.
+
+A subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.
 
 Example 1:
-Input: s = "leetcode", wordDict = ["leet","code"]
-Output: true
-Explanation: Return true because "leetcode" can be segmented as "leet code".
+
+Input: arr = ["un","iq","ue"]
+Output: 4
+Explanation: All the valid concatenations are:
+- ""
+- "un"
+- "iq"
+- "ue"
+- "uniq" ("un" + "iq")
+- "ique" ("iq" + "ue")
+Maximum length is 4.
 
 Example 2:
-Input: s = "applepenapple", wordDict = ["apple","pen"]
-Output: true
-Explanation: Return true because "applepenapple" can be segmented as "apple pen apple".
-Note that you are allowed to reuse a dictionary word.
-*******************************************************************************/
 
-// INTUITION: dp[i] = true if valid word seq ends there. 
-// The optimization is to look from current position i back and only substring 
-// and do dict lookup in case the prev j with dp[j] == true.
-
-
-class Solution {
-public:
-    bool wordBreak(string s, vector<string>& wordDict) {
-        int n = s.size();
-        vector<bool> dp(n + 1, false);
-        dp[0] = true;
-
-        for(int i = 1; i < n + 1; ++i) {
-            for(int j = 0; j < i; ++j) {
-                if(dp[j]) {
-                    string word = s.substr(j, i - j);
-
-                    if(find(wordDict.begin(), wordDict.end(), word) != wordDict.end()) {
-                        dp[i] = true; 
-                        break;
-                    }
-                }
-            }
-        }
-
-        return dp[n];
-    }
-};
+Input: arr = ["cha","r","act","ers"]
+Output: 6
+Explanation: Possible longest valid concatenations are "chaers" ("cha" + "ers") and "acters" ("act" + "ers").
 *******************************************************************************/
 
 // INTUITION: brute force dfs
