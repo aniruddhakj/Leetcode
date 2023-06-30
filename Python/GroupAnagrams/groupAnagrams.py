@@ -32,4 +32,4 @@ class Solution:
             # create key value based on count
             res[tuple(cnt)].append(s)
         
-        return res.values()``
+        return res.values()
