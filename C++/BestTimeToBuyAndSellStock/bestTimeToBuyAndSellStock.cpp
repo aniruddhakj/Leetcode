@@ -1,5 +1,6 @@
-// Author : Aniruddha Krishna Jha
-// Date : 13/11/2021
+// Author   : Aniruddha Krishna Jha
+// Date     : 13/11/2021
+// Link     : https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 
 /*******************************************************************************
 You are given an array prices where prices[i] is the price of a given stock on the ith day.

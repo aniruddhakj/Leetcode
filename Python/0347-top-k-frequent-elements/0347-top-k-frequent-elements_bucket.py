@@ -1,5 +1,6 @@
 # Author : Aniruddha Krishna Jha   
 # Date   : 01/07/2023
+# Link   : https://leetcode.com/problems/top-k-frequent-elements/
 
 '''********************************************************************************** 
 Given an integer array nums and an integer k, return the k most frequent elements. 
@@ -18,23 +19,23 @@ Output: [1]
 
 class Solution:
     '''
-    Heap approach
-    Time Complexity: O(klogn)
-    Space Complexity: O(n) 
+    Bucket sort approach
+    Time Complexity: O(n)
+    Space Complexity: O(n)
     '''
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        # create a heap of frequency, num pairs
-        heap = []
-        heapq.heapify(heap)
         count = {}
+        freq = [[] for i in range(len(nums) + 1)]
+
         # num -> count mapping
         for num in nums:
             count[num] = 1 + count.get(num, 0)
         # count -> nums mapping
         for num, cnt in count.items():
-            heapq.heappush(heap, (-cnt, num))
-        print(heap)
+            freq[cnt].append(num)
         res = []
-        for i in range(k):
-            res.append(heapq.heappop(heap)[1]) # append the numbers to res
-        return res
+        for i in range(len(freq) - 1, -1, -1):
+            for num in freq[i]:
+                res.append(num)
+                if len(res) == k:
+                    return res

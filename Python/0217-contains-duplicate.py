@@ -1,5 +1,6 @@
-# Author: Aniruddha Krishna Jha
-# Date: 30/06/2023
+# Author    : Aniruddha Krishna Jha
+# Date      : 30/06/2023
+# Link      : https://leetcode.com/problems/contains-duplicate/
 
 '''********************************************************************************** 
 Given an integer array nums, return true if any value appears at least twice in the array, 

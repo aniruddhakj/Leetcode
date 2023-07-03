@@ -1,5 +1,6 @@
-# Author : Aniruddha Krishna Jha   
-# Date   : 01/07/2023
+# Author    : Aniruddha Krishna Jha   
+# Date      : 01/07/2023
+# Link      : https://leetcode.com/problems/encode-and-decode-strings/
 
 '''********************************************************************************** 
 Design an algorithm to encode a list of strings to a string. 
