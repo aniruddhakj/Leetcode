@@ -1,5 +1,6 @@
-// Author : Aniruddha Krishna Jha
-// Date : 19/04/2022
+// Author   : Aniruddha Krishna Jha
+// Date     : 19/04/2022
+// Link     : https://leetcode.com/problems/valid-anagram/
 
 /*******************************************************************************
 Given two strings s and t, return true if t is an anagram of s, and false otherwise.

@@ -1,5 +1,6 @@
-// Author : Aniruddha Krishna Jha
-// Date : 09/08/2022
+// Author   : Aniruddha Krishna Jha
+// Date     : 09/08/2022
+// Link     : https://leetcode.com/problems/group-anagrams/
 
 /*******************************************************************************
 Given an array of strings strs, group the anagrams together. 

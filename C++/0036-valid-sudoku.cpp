@@ -1,5 +1,6 @@
-// Author : Aniruddha Krishna Jha   
-// Date   : 10/08/2022
+// Author   : Aniruddha Krishna Jha   
+// Date     : 10/08/2022
+// Link     : https://leetcode.com/problems/valid-sudoku/
 
 /********************************************************************************** 
 Determine if a 9 x 9 Sudoku board is valid.

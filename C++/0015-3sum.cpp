@@ -1,5 +1,6 @@
-// Author : Aniruddha Krishna Jha
-// Date : 09/08/2022
+// Author   : Aniruddha Krishna Jha
+// Date     : 09/08/2022
+// Link     : https://leetcode.com/problems/3sum/
 
 /*******************************************************************************
 Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] 

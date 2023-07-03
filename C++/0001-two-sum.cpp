@@ -1,5 +1,6 @@
-// Author : Aniruddha Krishna Jha
-// Date : 30/10/2021
+// Author   : Aniruddha Krishna Jha
+// Date     : 30/10/2021
+// Link     : https://leetcode.com/problems/two-sum/
 
 /*******************************************************************************
 Given an array of integers nums and an integer target, 

@@ -1,5 +1,6 @@
-// Author : Aniruddha Krishna Jha
-// Date : 11/08/2022
+// Author   : Aniruddha Krishna Jha
+// Date     : 11/08/2022
+// Link     : https://leetcode.com/problems/longest-consecutive-sequence/
 
 /*******************************************************************************
 Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.

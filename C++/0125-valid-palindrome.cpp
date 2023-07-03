@@ -1,5 +1,6 @@
-// Author : Aniruddha Krishna Jha
-// Date : 11/08/2022
+// Author   : Aniruddha Krishna Jha
+// Date     : 11/08/2022
+// Link     : https://leetcode.com/problems/valid-palindrome/
 
 /*******************************************************************************
 A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, 
