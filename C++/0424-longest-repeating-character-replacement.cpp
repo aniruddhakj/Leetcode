@@ -1,5 +1,6 @@
-// Author : Aniruddha Krishna Jha
-// Date : 17/10/2022
+// Author   : Aniruddha Krishna Jha
+// Date     : 17/10/2022
+// Link     : https://leetcode.com/problems/longest-repeating-character-replacement/
 
 /*******************************************************************************
 You are given a string s and an integer k.
