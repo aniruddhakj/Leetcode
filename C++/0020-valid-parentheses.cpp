@@ -1,5 +1,6 @@
-// Author : Aniruddha Krishna Jha
-// Date : 24/04/2022
+// Author   : Aniruddha Krishna Jha
+// Date     : 24/04/2022
+// Link     : https://leetcode.com/problems/valid-parentheses/
 
 /*******************************************************************************
 Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
