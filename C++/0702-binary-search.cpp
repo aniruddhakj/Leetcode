@@ -1,5 +1,6 @@
-// Author : Aniruddha Krishna Jha
-// Date : 22/03/2022
+// Author   : Aniruddha Krishna Jha
+// Date     : 22/03/2022
+// Link     : https://leetcode.com/problems/binary-search/
 
 /*******************************************************************************
 Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. 
