@@ -1,5 +1,5 @@
 # Author    : Aniruddha Krishna Jha   
-# Date      : 30/06/2023
+# Date      : 29/09/2024
 # Link      : https://leetcode.com/problems/two-sum/
 
 '''********************************************************************************** 
@@ -16,10 +16,12 @@ Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 **********************************************************************************'''
 
 class Solution:
-  '''
-  Create a map (val -> idx) to store all values, if (target - current) exists in map return the indices
-  Else return empty list
-  '''
+    '''
+    One pass Hash Map -> Store the previous values in a map and check if the difference is present in the map
+    
+    Time Complexity: O(n)
+    Space Complexity: O(n)
+    '''
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         prevValMap = {} # val -> idx
         for i, curr in enumerate(nums):

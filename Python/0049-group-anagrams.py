@@ -1,5 +1,5 @@
 # Author    : Aniruddha Krishna Jha   
-# Date      : 30/06/2023
+# Date      : 29/09/2024
 # Link      : https://leetcode.com/problems/group-anagrams/
 
 '''********************************************************************************** 
@@ -22,6 +22,12 @@ Output: [[""]]
 
 
 class Solution:
+    '''
+    Counting Sort -> Create a key based on the count of each character in the string
+
+    Time Complexity: O(n * k)
+    Space Complexity: O(n + k)
+    '''
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         res = collections.defaultdict(list)
 
